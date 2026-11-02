@@ -211,6 +211,7 @@ table.rep th{color:var(--muted);font-size:.66rem;text-transform:uppercase;letter
   </header>
 
   <!-- ================= CUSTOMER: WELCOME ================= -->
+  <noscript><div style="padding:40px 20px;text-align:center">JavaScript ON karein — bina iske app nahi khulegi.</div></noscript>
   <section class="view active" id="v-welcome">
     <div class="page">
       <div class="install" id="installBanner">
@@ -1070,7 +1071,7 @@ function init(){
   $('#histSearch').addEventListener('input',function(){ S.histQ=$('#histSearch').value; renderHist(); });
   show('v-welcome'); renderCats('');
 }
-document.addEventListener('DOMContentLoaded',init);
+document.addEventListener('DOMContentLoaded',function(){ try{ init(); }catch(err){ document.body.insertAdjacentHTML('afterbegin','<div style="background:#7a1f1f;color:#fff;padding:10px;font-size:12px">Load error: '+String(err).slice(0,120)+'</div>'); } });
 })();
 </script>
 </body>
