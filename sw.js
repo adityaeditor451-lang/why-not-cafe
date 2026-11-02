@@ -1,4 +1,4 @@
-const CACHE = 'wncafe-v1';
+const CACHE = 'wncafe-v2';
 const ASSETS = [
   './',
   './index.html',
